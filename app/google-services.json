@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "972672248057",
+    "firebase_url": "https://xpscanner-4640e-default-rtdb.firebaseio.com",
+    "project_id": "xpscanner-4640e",
+    "storage_bucket": "xpscanner-4640e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:972672248057:android:f6a82be717ad493c039a28",
+        "android_client_info": {
+          "package_name": "com.example.xpscanner"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "972672248057-d222sfpu343rjlpl63jchgr335l2mkkb.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.xpscanner",
+            "certificate_hash": "7bd7a8080bbf5a4c47b3b070a79e1b27b78c5d5c"
+          }
+        },
+        {
+          "client_id": "972672248057-i2b40od5chu8dham5q6o0v7rkq2ul1l7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCOWbtciZ-zsL_39ambaGiNM-H94fA62mI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "972672248057-i2b40od5chu8dham5q6o0v7rkq2ul1l7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

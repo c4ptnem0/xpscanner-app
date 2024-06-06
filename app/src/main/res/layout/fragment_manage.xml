@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    style="@style/fragment_bg"
+    tools:context=".ui.manage.ManageFragment">
+
+    <androidx.appcompat.widget.SearchView
+        android:id="@+id/searchSV"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:focusable="false"
+        android:layout_marginTop="6dp"
+        app:searchIcon="@drawable/icon_search"
+        app:closeIcon="@drawable/icon_close"
+        app:iconifiedByDefault="false"
+        app:queryHint="Search product"
+        app:searchHintIcon="@null"
+        app:queryBackground="@null"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/scanBtn" />
+
+    <ImageView
+        android:id="@+id/scanBtn"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/product_search_icon"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="15dp"
+        app:layout_constraintTop_toTopOf="@id/searchSV"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scrollbars="vertical"
+        app:layout_constraintTop_toBottomOf="@+id/searchSV"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <TextView
+        android:id="@+id/noResultsTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/no_products_found"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

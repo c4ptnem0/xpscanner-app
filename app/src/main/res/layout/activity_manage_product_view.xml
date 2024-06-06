@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        tools:context=".ui.manage.ManageProductViewActivity"
+        style="@style/fragment_bg">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appBarLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                style="@style/app_bar"
+                app:title="Edit Product"
+                app:titleTextColor="@android:color/white"
+                app:navigationIcon="@drawable/ic_navbar_back"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+                <TextView
+                    android:id="@+id/saveEditedProductBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="10dp"
+                    android:text="Save"
+                    android:textColor="@color/white"
+                    android:textAllCaps="true"
+                    android:padding="8dp"
+                    android:layout_gravity="end"/>
+
+            </androidx.appcompat.widget.Toolbar>
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/nestedScrollView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <RelativeLayout
+                android:id="@+id/imageconsparent"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <!-- product image imageView -->
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/productImage"
+                    android:layout_width="160dp"
+                    android:layout_height="160dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="20dp"
+                    android:background="@color/dashboard_scan"
+                    android:padding="10dp"
+                    android:src="@drawable/product_image" />
+
+                <EditText
+                    android:id="@+id/productID"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/productImage"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="5dp"
+                    android:background="@color/white"
+                    android:hint="@string/product_barcode"
+                    android:visibility="gone"
+                    android:padding="15dp"
+                    android:textColor="#000"
+                    android:drawableStart="@drawable/product_barcode"
+                    android:drawablePadding="10dp"
+                    android:maxLines="1"/>
+
+                <EditText
+                    android:id="@+id/productBarcode"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/productID"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="5dp"
+                    style="@style/edit_text_bg"
+                    android:hint="@string/product_barcode"
+                    android:padding="15dp"
+                    android:drawableStart="@drawable/product_barcode"
+                    android:drawablePadding="10dp"
+                    android:maxLines="1"/>
+
+                <EditText
+                    android:id="@+id/productName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/productBarcode"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="5dp"
+                    style="@style/edit_text_bg"
+                    android:drawableStart="@drawable/product_name"
+                    android:drawablePadding="10dp"
+                    android:hint="@string/product_name"
+                    android:maxLines="1"
+                    android:padding="15dp"/>
+
+                <EditText
+                    android:id="@+id/productCategory"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/productName"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="5dp"
+                    style="@style/edit_text_bg"
+                    android:drawableStart="@drawable/product_category"
+                    android:drawablePadding="10dp"
+                    android:hint="@string/product_category"
+                    android:maxLines="1"
+                    android:padding="15dp"/>
+
+                <EditText
+                    android:id="@+id/productDescription"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/productCategory"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="5dp"
+                    style="@style/edit_text_bg"
+                    android:drawableStart="@drawable/product_description"
+                    android:drawablePadding="10dp"
+                    android:hint="@string/product_description"
+                    android:padding="15dp"/>
+
+                <EditText
+                    android:id="@+id/productExpiration"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/productDescription"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="5dp"
+                    style="@style/edit_text_bg"
+                    android:hint="@string/product_expiration"
+                    android:padding="15dp"
+                    android:drawableStart="@drawable/product_expiration"
+                    android:drawablePadding="10dp"
+                    android:focusable="true"
+                    android:focusableInTouchMode="false"/>
+
+
+                <!-- floating action button for image selection code -->
+                <Button
+                    android:id="@+id/deleteProductBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_below="@+id/productExpiration"
+                    android:layout_centerVertical="true"
+                    android:layout_marginTop="22dp"
+                    android:text="Delete Product"
+                    android:textSize="16sp"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:backgroundTint="@color/app_button"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginBottom="20dp"/>
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/fab"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignEnd="@+id/productImage"
+                    android:layout_alignBottom="@+id/productImage"
+                    android:layout_marginEnd="-0dp"
+                    android:layout_marginBottom="-4dp"
+                    android:contentDescription="TODO"
+                    android:src="@drawable/product_add_image"
+                    android:tint="@color/white" />
+            </RelativeLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</ScrollView>
+
+
+
